@@ -3,19 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hotel.paradis.paradis.entity;
+package hotel.paradis.paradis.service;
 
-import java.time.LocalDate;
-import java.time.Month;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.transaction.Transactional;
+
+import hotel.paradis.paradis.entity.Habitacion;
+import hotel.paradis.paradis.repository.HabitacionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
@@ -41,7 +39,7 @@ public class HabitacionService {
         return habitacionRepository.findById(id).orElse(null);
     }
 
-    void addNewHabitacion(Habitacion habitacion) {
+    public void addNewHabitacion(Habitacion habitacion) {
         Optional<Habitacion> habitacionOpcional = habitacionRepository.findHabitacionById(habitacion.getIdHabitacion());
         //System.out.println(habitacion);
         
@@ -84,7 +82,7 @@ public class HabitacionService {
     }
 */
     @Transactional
-    void updateHabitacion(
+    public void updateHabitacion(
             Long habitacionId, 
             String nombre, 
             Integer precio, 

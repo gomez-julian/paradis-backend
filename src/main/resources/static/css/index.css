@@ -1,0 +1,13 @@
+.carousel-item{
+    height: 30rem;    
+}
+
+.emp-container{
+  padding: 3%;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  margin-right: 3%;
+  margin-left: 3%;
+  border-radius: 0.5rem;
+  background: #fff;
+}

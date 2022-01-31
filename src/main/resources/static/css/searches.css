@@ -1,0 +1,110 @@
+.ratings i {
+    font-size: 16px;
+    color: red
+}
+
+.strike-text {
+    color: red;
+    text-decoration: line-through
+}
+
+.product-image {
+    width: 100%
+}
+
+.dot {
+    height: 7px;
+    width: 7px;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 3px;
+    background-color: blue;
+    border-radius: 50%;
+    display: inline-block
+}
+
+.spec-1 {
+    color: #938787;
+    font-size: 15px
+}
+
+h5 {
+    font-weight: 400
+}
+
+.para {
+    font-size: 16px
+}
+
+.emp-container{
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+
+.color-body{
+  /* background: -webkit-linear-gradient(left, #3931af, #00c6ff); */
+  background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+}
+
+body {
+    display: grid;
+    font-family: 'Manrope', sans-serif
+}
+
+.mt-100 {
+    margin-top: 100px
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 20px;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 6px;
+    -moz-box-shadow: 0px 0px 5px 0px rgba(212, 182, 212, 1)
+}
+
+.form-control[readonly] {
+    background-color: #f44336;
+    opacity: 1;
+    color: #fff;
+    border: 1px solid #f44336
+}
+
+.pro-button {
+    background-color: #f44336;
+    border-color: #f44336
+}
+
+.pro-button:focus {
+    outline: none !important;
+    background-color: #f44336;
+    border-color: #f44336;
+    box-shadow: 0 0 0 0.2rem rgb(255, 255, 255) !important
+}
+
+.pro-button:active {
+    outline: none !important;
+    background-color: #f44336 !important;
+    border-color: #f44336 !important
+}
+
+.pro-button:hover {
+    background-color: #d8271a;
+    border-color: #d8271a
+}
+
+label {
+    font-weight: 800
+}
+
+ul i{
+    color: black !important;
+}

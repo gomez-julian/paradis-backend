@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hotel.paradis.paradis.entity;
+package hotel.paradis.paradis.configuration;
 
 import java.time.LocalDate;
 import java.time.Month;

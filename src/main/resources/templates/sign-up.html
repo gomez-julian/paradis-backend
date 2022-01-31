@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+  <head>
+  	<title>Paradis | Registro</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+
+	</head>
+	<body>
+		<header>
+			<div class="container menu-container">
+				<!-- CARGAR LA NAVBAR -->
+			</div>
+		</header>
+
+		<main>
+			<div class="container py-3 bg-transparent emp-container">
+				
+				<div class="container" name="contenedorFormularios">
+					<div class="row pt-3">
+						<div class="col-7 py-3 px-4 border border-2 bg-white no-padding-right mx-2 emp-container">
+							<form id="formulario" class="needs-validation" novalidate>
+								<p class="h3"><strong>Registrate en PARADIS para continuar</strong></p>
+								<p class="text-muted">Introduce tus datos.</p>
+								<div class="row py-3">
+									<div class="col-6">
+										<label for="inputNombreUsuario" class="form-label">Nombre(s)</label>
+										<input type="text" class="form-control" id="inputNombreUsuario" minlength="3" maxlength="40" required>
+									</div>
+									<div class="col-6">
+										<label for="inputApellidoPaterno" class="form-label">Primer apellido</label>
+										<input type="text" class="form-control" id="inputApellidoPaterno" minlength="3" maxlength="40" required>
+									</div>
+									<div class="col-6">
+										<label for="inputApellidoMaterno" class="form-label">Primer apellido</label>
+										<input type="text" class="form-control" id="inputApellidoMaterno" minlength="3" maxlength="40" required>
+									</div>
+									<div class="col-6">
+										<label for="inputEmail" class="form-label">Correo electrónico</label>
+										<input type="email" class="form-control" id="inputEmail" required>
+										<div class="invalid-feedback">
+											Introduce una dirección de correo electrónico válido.
+										</div>
+									</div>
+								</div>
+								<div class="row py-3">
+									<div class="col-6">
+										<label for="inputTelefono" class="form-label">Número de teléfono</label>
+										<input type="tel" class="form-control" id="inputTelefono" onkeyup="validarTelefono()" required>
+										<div class="invalid-feedback">
+											Número no válido.
+										</div>
+									</div>
+									<div class="col-6">
+										<label for="inputFechaNacimiento" class="form-label">Fecha de nacimiento</label>
+										<input type="date" class="form-control" id="inputFechaNacimiento" required>
+										<div class="invalid-feedback">
+											Elige tu fecha de nacimiento.
+										</div>
+									</div>
+								</div>
+								<div class="row py-3">
+									<div class="col-6">
+										<label for="inputPassword" class="form-label">Contraseña</label>
+										<input type="password" class="form-control" id="inputPass" onkeyup="validarPass()" minlength="6" maxlength="20" required>
+										<div class="invalid-feedback">
+											Introduce una contraseña (entre 6-20 caracteres).
+										</div>
+									</div>
+									<div class="col-6">
+										<label for="inputConfirmPassword" class="form-label">Confirmar contraseña</label>
+										<input type="password" class="form-control" id="inputConfirm" onkeyup="confirmarPass()" minlength="6" maxlength="20" required>
+										<div class="invalid-feedback">
+											Vuelve a introducir tu contraseña.
+										</div>
+									</div>
+								</div>
+								<div class="row py-3">
+									<div class="col-7">
+										<div class="form-check">
+											<input class="form-check-input" type="checkbox" value="" id="checkTerminos"
+												required>
+											<label class="form-check-label small" for="checkTerminos">
+												He leído y acepto los <a href="#">términos y condiciones.</a>
+											</label>
+										</div>
+										<div class="form-check">
+											<input class="form-check-input " type="checkbox" value="" id="checkFeed" checked>
+											<label class="form-check-label small" for="checkFeed">
+												Deseo recibir promociones en mi correo electrónico.
+											</label>
+										</div>
+									</div>
+									<div class="col-5 justify-content-center">
+										<button type="submit" class="btn btn-primary align-bottom"><strong>Registrarme</strong>
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="col-4 py-3 px-4 border border-2 border-start-0 bg-white no-padding-right align-items-center mx-2 emp-container">
+							<p class="h3"><strong>Otras formas de reservar</strong> </p>
+							<div class="row py-3 mx-2 justify-content-center  border-top">
+								<button type="button" id="btnGoogle" class="btn border border-secondary border-1 bg-white" disabled><i
+										class="bi bi-google pe-3 text-dark"></i>Iniciar sesión con Google</button>
+							</div>
+							<div class="row py-3 mx-2 justify-content-center border-bottom">
+								<button type="button" id="telefono" class="btn border border-secondary border-1 bg-white" disabled>
+									<i class="bi bi-telephone-fill pe-4 text-dark"></i>Reservar por teléfono</button>
+							</div>
+							<div class="row align-self-end">
+								<ul class="list-unstyled ">
+									<li><i class="bi bi-geo-alt-fill circle-icon"></i> Ciudad, CP, Calle, Número</li>
+									<li><i class="bi bi-envelope-fill circle-icon"></i> correo@paradis.com</li>
+									<li><i class="bi bi-telephone-fill circle-icon"></i> +52 123 123 1234</li>
+								</ul>
+							</div>
+							<div class="row"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</main>
+
+
+		<footer>
+			<div class="footer-container">
+				<!-- CARGAR EL FOOTER -->
+			</div>
+		</footer>
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/sign-up.js"></script>
+  <script
+      src="https://kit.fontawesome.com/f7f981a367.js"
+      crossorigin="anonymous"
+    ></script>
+
+	</body>
+</html>
+

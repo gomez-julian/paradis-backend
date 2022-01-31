@@ -3,9 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hotel.paradis.paradis.entity;
+package hotel.paradis.paradis.repository;
 
 import java.util.Optional;
+
+import hotel.paradis.paradis.entity.Habitacion;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

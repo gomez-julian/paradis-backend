@@ -3,22 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hotel.paradis.paradis.entity;
+package hotel.paradis.paradis.controller;
 
-import java.util.List;
+import hotel.paradis.paradis.entity.Habitacion;
+import hotel.paradis.paradis.service.HabitacionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 /**
@@ -52,7 +48,7 @@ public class HabitacionController {
 
     @GetMapping(value="/Habitacion-rentar")
     public String venderProductos(Model model){
-    // No sé qué hacer aquí xd
+    // No sï¿½ quï¿½ hacer aquï¿½ xd
         model.addAttribute("habitacionList",habitacionService.getHabitaciones());
         return "habitacion-rentar";
     }
