@@ -11,7 +11,7 @@ public class Habitacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_habitacion")
-    private Integer idHabitacion;
+    private Long idHabitacion;
 
     private String nombre;
 
@@ -68,11 +68,11 @@ public class Habitacion {
         this.servicios = servicios;
     }
 
-    public Integer getIdHabitacion() {
+    public Long getIdHabitacion() {
         return idHabitacion;
     }
 
-    public void setIdHabitacion(Integer idHabitacion) {
+    public void setIdHabitacion(Long idHabitacion) {
         this.idHabitacion = idHabitacion;
     }
 
