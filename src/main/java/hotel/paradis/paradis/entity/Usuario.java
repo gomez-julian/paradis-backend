@@ -13,7 +13,8 @@ public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_usuario")
-    private Integer idUsuario;
+    //private Integer idUsuario;
+    private Long idUsuario;
 
     private String nombre;
 
@@ -63,11 +64,26 @@ public class Usuario {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    public Integer getIdUsuario() {
-        return idUsuario;
+    public Usuario(Long idUsuario, String nombre, String apellidoPaterno, String apellidoMaterno, String email, String telefono, String password, LocalDate fechaNacimiento, String paypalEmail, String paypalPassword) {
+        this.idUsuario = idUsuario;
+        this.nombre = nombre;
+        this.apellidoPaterno = apellidoPaterno;
+        this.apellidoMaterno = apellidoMaterno;
+        this.email = email;
+        this.telefono = telefono;
+        this.password = password;
+        this.fechaNacimiento = fechaNacimiento;
+        this.paypalEmail = paypalEmail;
+        this.paypalPassword = paypalPassword;
     }
 
-    public void setIdUsuario(Integer idUsuario) {
+    //public Integer getIdUsuario() {
+      //  return idUsuario;
+    //}
+
+    public Long getIdUsuario(){return idUsuario;}
+
+    public void setIdUsuario(Long idUsuario) {
         this.idUsuario = idUsuario;
     }
 
