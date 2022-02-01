@@ -44,9 +44,9 @@
                 </div>
               </div>
         
-              <div class="container">
+              <div class="container" >
                   <!-- Inicio plantilla -->
-                <div class="container mt-2 mb-2">
+                <div class="container mt-2 mb-2" th:each="cliente: ${clienteList}">
                   <div class="d-flex justify-content-center row">
                     <div class="col-md-10">
                       <div class="row p-2 bg-white border rounded">
@@ -57,14 +57,14 @@
                           />
                         </div>
                         <div class="col-md-6 mt-1">
-                          <h5>Platinum Room</h5>
+                          <h5 th:text="${habitacion.nombre}"></h5>
                           <div class="d-flex flex-row">
                           </div>
                           <div class="mt-1 mb-1 spec-1">
                             <i class="fas fa-user-friends" style="color: black;"></i>
-                            <span>3 Adultos 2 Niños</span><span class="dot"></span
+                            <span th:text="${habitacion.descripcion}"></span><span class="dot"></span
                             >
-                            <i class="fas fa-bed" style="color: black;"></i><span> 3 King size</span>
+                            <i class="fas fa-bed" style="color: black;"></i><span th:text="${habitacion.cama}"></span>
                           </div>
                           <div class="mt-1 mb-1 spec-1">
                             <i class="fas fa-wifi" style="color: black;"></i>
@@ -73,8 +73,8 @@
                             <span>Vista a la playa</span><span class="dot"></span
                             ><i class="fas fa-hot-tub" style="color: black;"></i><span> Jacuzzi<br /></span>
                           </div>
-                          <p class="text-justify text-truncate para mb-0">
-                            Disfruta de los beneficios de la clase Platinum<br /><br />
+                          <p class="text-justify text-truncate para mb-0" th:text="${habitacion.descripcion}">
+                            <br /><br />
                           </p>
                         </div>
                         <div
@@ -86,7 +86,7 @@
                           "
                         >
                           <div class="d-flex flex-row align-items-center">
-                            <h4 class="mr-1">$13.99</h4>
+                            <h4 class="mr-1" th:text="${habitacion.precio}"></h4>
                             <span> por noche</span>
                           </div>
                           <h6 class="text-success">Apartado disponible</h6>

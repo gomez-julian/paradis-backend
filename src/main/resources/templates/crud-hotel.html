@@ -42,20 +42,20 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr th:each="habitacion: ${habitacionList}">
 
                                 </th>
-                                <td>
-                                    001
+                                <td th:text="${habitacion.id}">
+                                    
                                 </td>
-                                <td>Lolsito</td>
-                                <td>
+                                <td th:text="${habitacion.nombre}"></td>
+                                <td th:text="${habitacion.descripcion}">
                                     Descripcion de la habitacion
-                                    <small class="d-block">
+                                    <small class="d-block" th:text="${habitacion.cama}">
                                         <i class="fas fa-bed"></i>
                                         Descripcion de las camas</small>
                                 </td>
-                                <td>$ 1599.00</td>
+                                <td th:text="${habitacion.precio}"></td>
                                 <td>
                                     <ul class="persons">
                                         <li>
