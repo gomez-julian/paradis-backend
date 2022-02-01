@@ -78,18 +78,18 @@ public class HabitacionController {
     }
     
     //Método para desplegar formulario de edición
-    @GetMapping(path="/editarhabitacion/{habitacionId}")
+    @GetMapping(path="/edit-hotel/{habitacionId}")
     public String editarHabitacion(@PathVariable("habitacionId") Long habitacionId, Model model){
     
         model.addAttribute("habitacion", habitacionService.getHabitacion(habitacionId));
-        return "editar-habitacion";
+        return "edit-hotel";
     }
     
-    @PostMapping(path="/editarhabitacion")
+    @PostMapping(path="/edit-hotel")
     public String updateProducto(@ModelAttribute Habitacion habitacion){
     
         habitacionService.updateHabitacion(habitacion.getIdHabitacion(), habitacion.getNombre(), 
                 habitacion.getPrecio(),habitacion.getDescripcion(), habitacion.getCama(), habitacion.getCategoria());
-        return "redirect:/habitacion/mostrar";
+        return "redirect:/habitacion/crud-hotel";
     }
 }
