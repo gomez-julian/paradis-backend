@@ -22,7 +22,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
  * @author maste
  */
 @Controller
-@RequestMapping(path="/producto")
+@RequestMapping(path="/habitacion")
 public class HabitacionController {
     
     private final HabitacionService habitacionService;
@@ -39,11 +39,11 @@ public class HabitacionController {
         return "index";
     }
     
-    @GetMapping(value="/mostrar")
+    @GetMapping(value="/crud-hotel")
     public String getHabitaciones(Model model){
     
         model.addAttribute("HabitacionList",habitacionService.getHabitaciones());
-        return "Habitacion-list";
+        return "crud-hotel";
     }
 
     @GetMapping(value="/Habitacion-rentar")
@@ -53,29 +53,28 @@ public class HabitacionController {
         return "habitacion-rentar";
     }
     
-    @GetMapping("/agregar-habitacion")
+    @GetMapping("/add-hotel")
     public String agregarHabitacion(Model model){
     
         model.addAttribute("habitacion", new Habitacion());
-        return "agregar-habitacion";
+        return "add-hotel";
     }
 
-    
-    @PostMapping("/agregar")
+    @PostMapping("/add-hotel")
     public String registerNewHabitacion(@ModelAttribute Habitacion habitacion, RedirectAttributes redirectAttrs){
         System.out.println(habitacion);
         habitacionService.addNewHabitacion(habitacion);
         redirectAttrs
                 .addFlashAttribute("mensaje","Agregado correctamente")
                 .addFlashAttribute("clase","success");
-        return "redirect:/habitacion/mostrar";
+        return "redirect:/habitacion/crud-hotel";
     }
     
     @GetMapping(path="/eliminar/{habitacionId}")
     public String deleteHabitacion(@PathVariable("habitacionId") Long habitacionId){
     
         habitacionService.deleteHabitacion(habitacionId);
-        return "redirect:/habitacion/mostrar";
+        return "redirect:/habitacion/crud-hotel";
     }
     
     //Método para desplegar formulario de edición

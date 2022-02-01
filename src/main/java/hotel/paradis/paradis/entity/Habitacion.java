@@ -123,4 +123,8 @@ public class Habitacion {
     public void setServicios(List<Servicio> servicios) {
         this.servicios = servicios;
     }
+
+public String toString(){
+return  idHabitacion + nombre + precio + descripcion + cama + categoria;
+}
 }

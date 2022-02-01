@@ -19,9 +19,9 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface HabitacionRepository extends JpaRepository<Habitacion, Long>{
     
-    @Query("select s from Habitaciones s where s.id_habitacion =?1")
+    /*@Query("select s from Habitaciones s where s.id_habitacion =?1")
     Optional<Habitacion> findHabitacionById(Long id);
 
     @Query("select s from Habitacion s where s.nombre =?1")
-    Optional<Habitacion> findHabitacionByName(String nombre);
+    Optional<Habitacion> findHabitacionByName(String nombre);*/
 }

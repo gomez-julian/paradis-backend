@@ -40,13 +40,13 @@ public class HabitacionService {
     }
 
     public void addNewHabitacion(Habitacion habitacion) {
-        Optional<Habitacion> habitacionOpcional = habitacionRepository.findHabitacionById(habitacion.getIdHabitacion());
+        /*Optional<Habitacion> habitacionOpcional = habitacionRepository.findHabitacionById(habitacion.getIdHabitacion());
         //System.out.println(habitacion);
         
         if(habitacionOpcional.isPresent()){
         
             throw new IllegalStateException("ID registrado anteriormente");
-        }
+        }*/
         habitacionRepository.save(habitacion);
     }
     
