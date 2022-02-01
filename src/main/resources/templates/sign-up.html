@@ -33,23 +33,23 @@
 								<p class="text-muted">Introduce tus datos.</p>
 								<div class="row py-3">
 									<div class="col-6">
-										<label for="inputNombreUsuario" class="form-label">Nombre(s)</label>
-										<input type="text" class="form-control" id="inputNombreUsuario"
+										<label for="nombre" class="form-label">Nombre(s)</label>
+										<input type="text" class="form-control" id="nombre" name="nombre"
 											   minlength="3" maxlength="40" field="*{nombre}" required>
 									</div>
 									<div class="col-6">
-										<label for="inputApellidoPaterno" class="form-label">Primer apellido</label>
-										<input type="text" class="form-control" id="inputApellidoPaterno"
+										<label for="apellidoPaterno" class="form-label">Primer apellido</label>
+										<input type="text" class="form-control" id="apellidoPaterno" name="apellidoPaterno"
 											   minlength="3" maxlength="40" field="*{apellidoPaterno}" required>
 									</div>
 									<div class="col-6">
-										<label for="inputApellidoMaterno" class="form-label">Primer apellido</label>
-										<input type="text" class="form-control" id="inputApellidoMaterno"
+										<label for="apellidoMaterno" class="form-label">Segundo apellido</label>
+										<input type="text" class="form-control" id="apellidoMaterno" name="apellidoMaterno"
 											   minlength="3" maxlength="40" field="*{apellidoMaterno}" required>
 									</div>
 									<div class="col-6">
-										<label for="inputEmail" class="form-label">Correo electrónico</label>
-										<input type="email" class="form-control" id="inputEmail" field="*{email}" required>
+										<label for="email" class="form-label">Correo electrónico</label>
+										<input type="email" class="form-control" id="email" name="email" field="*{email}" required>
 										<div class="invalid-feedback">
 											Introduce una dirección de correo electrónico válido.
 										</div>
@@ -57,25 +57,25 @@
 								</div>
 								<div class="row py-3">
 									<div class="col-6">
-										<label for="inputTelefono" class="form-label">Número de teléfono</label>
-										<input type="tel" class="form-control" id="inputTelefono"
-											   onkeyup="validarTelefono()" field="*{telefono}" required>
+										<label for="telefono" class="form-label">Número de teléfono</label>
+										<input type="tel" class="form-control" id="telefono" name="telefono"
+											   onkeyup="validarTelefono()" maxlength="10" field="*{telefono}" required>
 										<div class="invalid-feedback">
 											Número no válido.
 										</div>
 									</div>
 									<div class="col-6">
-										<label for="inputFechaNacimiento" class="form-label">Fecha de nacimiento</label>
-										<input type="date" class="form-control" id="inputFechaNacimiento" field="*{fechaNacimiento}" required>
-										<div class="invalid-feedback">
+										<label for="fechaNacimiento" class="form-label">Fecha de nacimiento</label>
+										<input type="text" class="form-control" id="fechaNacimiento" name="fechaNacimiento" field="*{fechaNacimiento}" required>
+										<div class="invalid-feedback"> <!--Cambiar a date en type cuando se solucione el casting-->
 											Elige tu fecha de nacimiento.
 										</div>
 									</div>
 								</div>
 								<div class="row py-3">
 									<div class="col-6">
-										<label for="inputPassword" class="form-label">Contraseña</label>
-										<input type="password" class="form-control" id="inputPassword" onkeyup="validarPass()"
+										<label for="password" class="form-label">Contraseña</label>
+										<input type="password" class="form-control" id="password" name="password" onkeyup="validarPass()"
 											   minlength="6" maxlength="20" field="*{password}" required>
 										<div class="invalid-feedback">
 											Introduce una contraseña (entre 6-20 caracteres).
@@ -120,7 +120,7 @@
 										class="bi bi-google pe-3 text-dark"></i>Iniciar sesión con Google</button>
 							</div>
 							<div class="row py-3 mx-2 justify-content-center border-bottom">
-								<button type="button" id="telefono" class="btn border border-secondary border-1 bg-white" disabled>
+								<button type="button" id="tel" class="btn border border-secondary border-1 bg-white" disabled>
 									<i class="bi bi-telephone-fill pe-4 text-dark"></i>Reservar por teléfono</button>
 							</div>
 							<div class="row align-self-end">
