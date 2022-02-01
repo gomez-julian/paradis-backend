@@ -12,7 +12,7 @@ public class Reservacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_reservacion")
-    private Integer idReservacion;
+    private Long idReservacion;
 
     @ManyToOne
     @JoinColumn(name = "id_usuario")
@@ -59,11 +59,11 @@ public class Reservacion {
         this.checkOut = checkOut;
     }
 
-    public Integer getIdReservacion() {
+    public long getIdReservacion() {
         return idReservacion;
     }
 
-    public void setIdReservacion(Integer idReservacion) {
+    public void setIdReservacion(long idReservacion) {
         this.idReservacion = idReservacion;
     }
 
@@ -89,5 +89,17 @@ public class Reservacion {
 
     public void setChecked(Boolean checked) {
         this.checked = checked;
+    }
+
+    @Override
+    public String toString() {
+        return "Reservacion{" +
+                "idReservacion=" + idReservacion +
+                ", usuario=" + usuario +
+                ", habitacion=" + habitacion +
+                ", checkIn=" + checkIn +
+                ", checkOut=" + checkOut +
+                ", checked=" + checked +
+                '}';
     }
 }
