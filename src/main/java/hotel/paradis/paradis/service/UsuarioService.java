@@ -33,13 +33,15 @@ public class UsuarioService {
     }
 
     public void addNewUsuario(Usuario usuario) {
-        Optional<Usuario> usuarioOpcional = usuarioRepository.findUsuarioById(usuario.getIdUsuario());
-        //System.out.println(usuario);
+        /*Optional<Usuario> usuarioOpcional = usuarioRepository.findUsuarioById(usuario.getIdUsuario());
+        System.out.println(usuario);
 
         if(usuarioOpcional.isPresent()){
 
             throw new IllegalStateException("ID registrado anteriormente");
         }
+
+         */
         usuarioRepository.save(usuario);
     }
 
@@ -57,7 +59,7 @@ public class UsuarioService {
     }
 
     @Transactional
-    public void updateHabitacion(
+    public void updateUsuario(
             Long usuarioId,
             String nombre,
             String apellidoPaterno,
@@ -91,12 +93,12 @@ public class UsuarioService {
         if(email != null && email.length() > 0
                 && !Objects.equals(usuario.getEmail(), email)){
 
-            Optional<Usuario> clienteOptional = usuarioRepository
+            /*Optional<Usuario> usuarioOptional = usuarioRepository
                     .findUsuarioByEmail(email);
-            if(clienteOptional.isPresent()){
+            if(usuarioOptional.isPresent()){
 
                 throw new IllegalStateException("El correo ya se encuentra registrado");
-            }
+            }*/
             usuario.setEmail(email);
         }
 

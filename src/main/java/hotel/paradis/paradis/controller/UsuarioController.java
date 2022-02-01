@@ -40,37 +40,29 @@ public class UsuarioController {
         model.addAttribute("UsuarioList",usuarioService.getUsuarios());
         return "Usuario-list";
     }
-/*
-    @GetMapping(value="/Usuario-rentar")
-    public String venderProductos(Model model){
-        // No s� qu� hacer aqu� xd
-        model.addAttribute("habitacionList",usuarioService.getHabitaciones());
-        return "habitacion-rentar";
-    }
-*/
-    @GetMapping("/agregar-usuario")
+
+    @GetMapping("/sign-up")
     public String agregarUsuario(Model model){
 
         model.addAttribute("usuario", new Usuario());
-        return "agregar-usuario";
+        return "sign-up";
     }
 
-
-    @PostMapping("/agregar")
-    public String registerNewHabitacion(@ModelAttribute Usuario usuario, RedirectAttributes redirectAttrs){
+    @PostMapping("/sign-up")
+    public String registerNewUsuario(@ModelAttribute Usuario usuario, RedirectAttributes redirectAttrs){
         System.out.println(usuario);
         usuarioService.addNewUsuario(usuario);
         redirectAttrs
                 .addFlashAttribute("mensaje","Agregado correctamente")
                 .addFlashAttribute("clase","success");
-        return "redirect:/usuario/mostrar";
+        return "redirect:/usuario/sign-up";
     }
 
     @GetMapping(path="/eliminar/{usuarioId}")
     public String deleteUsuario(@PathVariable("usuarioId") Long usuarioId){
 
         usuarioService.deleteUsuario(usuarioId);
-        return "redirect:/usuario/mostrar";
+        return "redirect:/usuario/login";
     }
 
     //Método para desplegar formulario de edición
@@ -84,8 +76,8 @@ public class UsuarioController {
     @PostMapping(path="/editarusuario")
     public String updateUsuario(@ModelAttribute Usuario usuario){
 
-        usuarioService.updateHabitacion(usuario.getIdUsuario(), usuario.getNombre(),
-                usuario.getApellidoPaterno(),usuario.getApellidoPaterno(),
+        usuarioService.updateUsuario(usuario.getIdUsuario(), usuario.getNombre(),
+                usuario.getApellidoPaterno(),usuario.getApellidoMaterno(),
                 usuario.getEmail(), usuario.getTelefono(), usuario.getPassword());
         return "redirect:/usuario/mostrar";
     }

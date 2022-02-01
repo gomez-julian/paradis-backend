@@ -14,7 +14,7 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id_usuario")
     //private Integer idUsuario;
-    private Long idUsuario;
+    private long idUsuario;
 
     private String nombre;
 
@@ -64,7 +64,7 @@ public class Usuario {
         this.fechaNacimiento = fechaNacimiento;
     }
 
-    public Usuario(Long idUsuario, String nombre, String apellidoPaterno, String apellidoMaterno, String email, String telefono, String password, LocalDate fechaNacimiento, String paypalEmail, String paypalPassword) {
+    public Usuario(long idUsuario, String nombre, String apellidoPaterno, String apellidoMaterno, String email, String telefono, String password, LocalDate fechaNacimiento, String paypalEmail, String paypalPassword) {
         this.idUsuario = idUsuario;
         this.nombre = nombre;
         this.apellidoPaterno = apellidoPaterno;
@@ -77,13 +77,9 @@ public class Usuario {
         this.paypalPassword = paypalPassword;
     }
 
-    //public Integer getIdUsuario() {
-      //  return idUsuario;
-    //}
-
     public Long getIdUsuario(){return idUsuario;}
 
-    public void setIdUsuario(Long idUsuario) {
+    public void setIdUsuario(long idUsuario) {
         this.idUsuario = idUsuario;
     }
 
@@ -165,5 +161,22 @@ public class Usuario {
 
     public void setReservaciones(List<Reservacion> reservaciones) {
         this.reservaciones = reservaciones;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "idUsuario=" + idUsuario +
+                ", nombre='" + nombre + '\'' +
+                ", apellidoPaterno='" + apellidoPaterno + '\'' +
+                ", apellidoMaterno='" + apellidoMaterno + '\'' +
+                ", email='" + email + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", password='" + password + '\'' +
+                ", fechaNacimiento=" + fechaNacimiento +
+                ", paypalEmail='" + paypalEmail + '\'' +
+                ", paypalPassword='" + paypalPassword + '\'' +
+                ", reservaciones=" + reservaciones +
+                '}';
     }
 }
