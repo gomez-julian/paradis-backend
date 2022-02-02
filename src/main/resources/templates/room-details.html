@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <title>Paradis | Perfil</title>
+    <title>Paradis | Detalles</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -13,6 +13,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link
+      rel="stylesheet"
+      href="https://sachinchoolur.github.io/lightslider/dist/css/lightslider.css"
+    />
 
 </head>
 
@@ -49,135 +53,188 @@
     </header>
 
     <main>
-        <div class="main-content">
-            <!-- Page content -->
-            <div class="container-fluid mt--7">
-              <div class="row">
-                <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0 emp-contaier">
-                  <div class="card card-profile shadow">
-                    
-                    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
-                      <div class="d-flex justify-content-between">
-                        <a href="#" class="btn btn-sm btn-info mr-4">Connect</a>
-                        <a href="#" class="btn btn-sm btn-default float-right">Message</a>
-                      </div>
+        <div class="container-fluid mt-2 mb-3">
+            <div class="row no-gutters">
+                
+              <div class="col-md-5 pr-2">
+                  
+                <div class="card">
+                  <div class="demo">
+                    <ul id="lightSlider">
+                      <li
+                        data-thumb="https://cdn.pixabay.com/photo/2017/03/19/01/43/living-room-2155376_960_720.jpg"
+                      >
+                        <img
+                        src=https://cdn.pixabay.com/photo/2017/03/19/01/43/living-room-2155376_960_720.jpg
+                        />
+                      </li>
+                      <li
+                        data-thumb="https://cdn.pixabay.com/photo/2014/08/11/21/39/wall-416060_960_720.jpg"
+                      >
+                        <img
+                          src="https://cdn.pixabay.com/photo/2014/08/11/21/39/wall-416060_960_720.jpg"
+                        />
+                      </li>
+                      <li
+                        data-thumb="https://cdn.pixabay.com/photo/2014/08/11/21/39/wall-416060_960_720.jpg"
+                      >
+                        <img
+                          src="https://cdn.pixabay.com/photo/2014/08/11/21/39/wall-416060_960_720.jpg"
+                        />
+                      </li>
+                      <li
+                        data-thumb="https://cdn.pixabay.com/photo/2016/11/29/07/16/beach-1868047_960_720.jpg"
+                      >
+                        <img
+                          src="https://cdn.pixabay.com/photo/2016/11/29/07/16/beach-1868047_960_720.jpg"
+                        />
+                      </li>
+                      <li
+                        data-thumb="https://cdn.pixabay.com/photo/2018/05/01/18/24/waters-3366444_960_720.jpg"
+                      >
+                        <img
+                          src="https://cdn.pixabay.com/photo/2018/05/01/18/24/waters-3366444_960_720.jpg"
+                        />
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card mt-2">
+                    <h3>Acerca de la habitación</h3>
+                    <div class="d-flex flex-row">
                     </div>
-                    <div class="card-body pt-0 pt-md-4">
-                      <div class="text-center">
-                        <h3>
-                          Jessica Jones<span class="font-weight-light">, 27</span>
-                        </h3>
-                        <div class="h5 font-weight-300">
-                          <i class="ni location_pin mr-2"></i>Bucharest, Romania
+                    <hr />
+                    
+                   
+                    <div class="comment-section">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex flex-row align-items-center">
+                          <i class="fas fa-user-friends" style="color: black;"></i>
+                          <div class="d-flex flex-column ml-1 comment-profile">
+                            <span>| Máximo 3 Adultos y 2 Niños</span>
+                          </div>
                         </div>
-                        <div class="h5 mt-4">
-                          <i class="ni business_briefcase-24 mr-2"></i>Solution Manager - Creative Tim Officer
-                        </div>
-                        <div>
-                          <i class="ni education_hat mr-2"></i>University of Computer Science
-                        </div>
-                        <hr class="my-4">
-                        <p>Ryan — the name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his own music.</p>
-                        <a href="#">Show more</a>
                       </div>
+                      <hr />
+                      <div class="d-flex justify-content-between align-items-center">
+                          <div class="d-flex flex-row align-items-center">
+                              <i class="fas fa-bed" style="color: black;"></i>
+                            <div class="d-flex flex-column ml-1 comment-profile">
+                              <span>| 2 Habitaciones 3 Camas King size en total</span>
+                            </div>
+                          </div>
+                        </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-xl-8 order-xl-1">
-                  <div class="card emp-contaier">
-                    <div class="card-header bg-white border-0">
-                      <div class="row align-items-center">
-                        <div class="col-8">
-                          <h3 class="mb-0">Mi cuenta</h3>
-                        </div>
-                        <div class="col-4 text-right">
-                          <a href="#!" class="btn btn-sm btn-primary">Editar</a>
-                          <a href="#!" class="btn btn-sm btn-primary">Cerrar sesión</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <form>
-                        <h6 class="heading-small text-muted mb-4">User information</h6>
-                        <div class="pl-lg-4">
-                          <div class="row">
-                            <div class="col-lg-6">
-                              <div class="form-group focused">
-                                <label class="form-control-label" for="input-username">Username</label>
-                                <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="lucky.jesse">
-                              </div>
-                            </div>
-                            <div class="col-lg-6">
-                              <div class="form-group">
-                                <label class="form-control-label" for="input-email">Email address</label>
-                                <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="jesse@example.com">
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-lg-6">
-                              <div class="form-group focused">
-                                <label class="form-control-label" for="input-first-name">First name</label>
-                                <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="Lucky">
-                              </div>
-                            </div>
-                            <div class="col-lg-6">
-                              <div class="form-group focused">
-                                <label class="form-control-label" for="input-last-name">Last name</label>
-                                <input type="text" id="input-last-name" class="form-control form-control-alternative" placeholder="Last name" value="Jesse">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <hr class="my-4">
-                        <!-- Address -->
-                        <h6 class="heading-small text-muted mb-4">Contact information</h6>
-                        <div class="pl-lg-4">
-                          <div class="row">
-                            <div class="col-md-12">
-                              <div class="form-group focused">
-                                <label class="form-control-label" for="input-address">Address</label>
-                                <input id="input-address" class="form-control form-control-alternative" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" type="text">
-                              </div>
-                            </div>
-                          </div>
-                          <div class="row">
-                            <div class="col-lg-4">
-                              <div class="form-group focused">
-                                <label class="form-control-label" for="input-city">City</label>
-                                <input type="text" id="input-city" class="form-control form-control-alternative" placeholder="City" value="New York">
-                              </div>
-                            </div>
-                            <div class="col-lg-4">
-                              <div class="form-group focused">
-                                <label class="form-control-label" for="input-country">Country</label>
-                                <input type="text" id="input-country" class="form-control form-control-alternative" placeholder="Country" value="United States">
-                              </div>
-                            </div>
-                            <div class="col-lg-4">
-                              <div class="form-group">
-                                <label class="form-control-label" for="input-country">Postal code</label>
-                                <input type="number" id="input-postal-code" class="form-control form-control-alternative" placeholder="Postal code">
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <hr class="my-4">
-                        <!-- Description -->
-                        <h6 class="heading-small text-muted mb-4">About me</h6>
-                        <div class="pl-lg-4">
-                          <div class="form-group focused">
-                            <label>About Me</label>
-                            <textarea rows="4" class="form-control form-control-alternative" placeholder="A few words about you ...">A beautiful Dashboard for Bootstrap 4. It is Free and Open Source.</textarea>
-                          </div>
-                        </div>
-                      </form>
+              <div class="col-md-7">
+                <div class="card">
+                  <div class="about">
+                    <h3 class="font-weight-bold"
+                      >Platinum Room
+                  </h3>
+                    <h4 class="font-weight-bold">$13.99</h4>
+                  </div>
+                  <div class="buttons">
+                    <button class="btn btn-outline-warning btn-long cart">
+                      Ver disponibilidad
+                    </button>
+                    <button class="btn btn-warning btn-long buy">Reservar ahora</button>
+                    <button class="btn btn-light wishlist">
+                      <i class="fa fa-heart"></i>
+                    </button>
+                  </div>
+                  <hr />
+                  <div class="product-description">
+                    
+                    
+                    <div class="mt-2">
+                      
+                       
+                        
+                      
+    
                     </div>
                   </div>
+                </div>
+    
+                <div class="card mt-2">
+                  <div class="d-flex flex-row align-items-center">
+                    <h3>Verificar otras disponibilidades</h3>
+                  </div>
+                  
+                  <div class="row align-items-center">
+                    <div class="col-sm-2 col-md-4">
+                      <label>LLegada</label> <input id="dpto" type="date" class="form-control" />
+                    </div>
+                    <div class="col-sm-2 col-md-4">
+                      <label>Salida</label> <input id="dpfrom" type="date" class="form-control" />
+                    </div>
+                    <div class="buttons col-sm-2 col-md-4">
+                      <button class="btn btn-outline-warning btn-long cart">
+                        Ver disponibilidad
+                      </button>
+                    </div>
+                    <span class="fs-6 text mt-1">*Check-in: A partir de las 12:00 hrs <br>
+                    *Check-out: Máximo a las 15:00 hrs</span>
+                  </div>  
+    
+    
+                </div>
+    
+                <div class="card mt-2">
+                  <h3 class="font-weight-bold">Descripción</h3>
+                      <p>
+                        Habitación con vista a la playa dentro de nuestras instalaciones
+                      </p>
+                      <div class="bullets">
+                        <div class="d-flex align-items-center mb-1">
+                          <i class="fas fa-glass-cheers" style="color: black;"></i>
+                          <span class="bullet-text">| Descuentos en el bar de las instalaciones</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-1">
+                          <i class="fas fa-laptop-house" style="color: black;"></i>
+                          <span class="bullet-text">| Espacio para Home office</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-1">
+                          <i class="fas fa-hotdog" style="color: black;"></i>
+                          <span class="bullet-text">| Entrada gratis al Buffete</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-1">
+                          <i class="fas fa-user-lock" style="color: black;"></i>
+                          <span class="bullet-text"
+                            >| Seguridad adicional a la habitación</span
+                          >
+                        </div>
+                        <div class="d-flex align-items-center mb-1">
+                          <i class="fab fa-cloudversify" style="color: black;"></i>
+                          <span class="bullet-text">| Servicios de streaming durante la estancia</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-1">
+                          <i class="far fa-id-card" style="color: black;"></i>
+                          <span class="bullet-text"
+                            >| Disfruta todos los beneficios de la clase Platinum</span
+                          >
+                        </div>
+                      </div>
+                </div>
+    
+                <div class="card mt-2">
                 </div>
               </div>
             </div>
           </div>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+          <script src="https://sachinchoolur.github.io/lightslider/dist/js/lightslider.js"></script>
+          <script>
+            $("#lightSlider").lightSlider({
+              gallery: true,
+              item: 1,
+              loop: true,
+              slideMargin: 0,
+              thumbItem: 9,
+            });
+          </script>
 
     </main>
 
@@ -708,6 +765,244 @@ h5,
   box-sizing: border-box;
   border-radius: 0.5rem;
   background: #fff;
+}
+
+body {
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+}
+
+.card {
+    background-color: #fff;
+    padding: 14px;
+    border: none
+}
+
+.demo {
+    width: 100%
+}
+
+ul {
+    list-style: none outside none;
+    padding-left: 0;
+    margin-bottom: 0
+}
+
+li {
+    display: block;
+    float: left;
+    margin-right: 6px;
+    cursor: pointer
+}
+
+img {
+    display: block;
+    height: auto;
+    width: 100%
+}
+
+.stars i {
+    color: #f6d151
+}
+
+.stars span {
+    font-size: 13px
+}
+
+hr {
+    color: #d4d4d4
+}
+
+.badge {
+    padding: 5px !important;
+    padding-bottom: 6px !important
+}
+
+.badge i {
+    font-size: 10px
+}
+
+.profile-image {
+    width: 35px
+}
+
+.comment-ratings i {
+    font-size: 13px
+}
+
+.username {
+    font-size: 12px
+}
+
+.comment-profile {
+    line-height: 17px
+}
+
+.date span {
+    font-size: 12px
+}
+
+.p-ratings i {
+    color: #f6d151;
+    font-size: 12px
+}
+
+.btn-long {
+    padding-left: 35px;
+    padding-right: 35px
+}
+
+.buttons {
+    margin-top: 15px
+}
+
+.buttons .btn {
+    height: 46px
+}
+
+.buttons .cart {
+    border-color: #ff7676;
+    color: #ff7676
+}
+
+.buttons .cart:hover {
+    background-color: #e86464 !important;
+    color: #fff
+}
+
+.buttons .buy {
+    color: #fff;
+    background-color: #ff7676;
+    border-color: #ff7676
+}
+
+.buttons .buy:focus,
+.buy:active {
+    color: #fff;
+    background-color: #ff7676;
+    border-color: #ff7676;
+    box-shadow: none
+}
+
+.buttons .buy:hover {
+    color: #fff;
+    background-color: #e86464;
+    border-color: #e86464
+}
+
+.buttons .wishlist {
+    background-color: #fff;
+    border-color: #ff7676
+}
+
+.buttons .wishlist:hover {
+    background-color: #e86464;
+    border-color: #e86464;
+    color: #fff
+}
+
+.buttons .wishlist:hover i {
+    color: #fff
+}
+
+.buttons .wishlist i {
+    color: #ff7676
+}
+
+.comment-ratings i {
+    color: #f6d151
+}
+
+.followers {
+    font-size: 9px;
+    color: #d6d4d4
+}
+
+.store-image {
+    width: 42px
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px
+}
+
+.bullet-text {
+    font-size: 12px
+}
+
+.my-color {
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+label.radio {
+    cursor: pointer
+}
+
+label.radio input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none
+}
+
+label.radio span {
+    border: 2px solid #8f37aa;
+    display: inline-block;
+    color: #8f37aa;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    text-transform: uppercase;
+    transition: 0.5s all
+}
+
+label.radio .red {
+    background-color: red;
+    border-color: red
+}
+
+label.radio .blue {
+    background-color: blue;
+    border-color: blue
+}
+
+label.radio .green {
+    background-color: green;
+    border-color: green
+}
+
+label.radio .orange {
+    background-color: orange;
+    border-color: orange
+}
+
+label.radio input:checked+span {
+    color: #fff;
+    position: relative
+}
+
+label.radio input:checked+span::before {
+    opacity: 1;
+    content: '\2713';
+    position: absolute;
+    font-size: 13px;
+    font-weight: bold;
+    left: 4px
+}
+
+.card-body {
+    padding: 0.3rem 0.3rem 0.2rem
+}
+
+.form-control {
+    width: auto;
+    
 }
     </style>
 

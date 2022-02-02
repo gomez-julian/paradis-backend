@@ -24,6 +24,7 @@ public class Usuario {
     @Column(name="apellido_materno")
     private String apellidoMaterno;
 
+    @Column(unique = true, length = 50)
     private String email;
 
     private String telefono;
@@ -42,6 +43,19 @@ public class Usuario {
 
     @OneToMany(mappedBy = "usuario")
     private List<Reservacion> reservaciones = new ArrayList<>();
+
+    @ManyToOne
+    @JoinColumn(name = "rol_id_role")
+    private Rol rol;
+
+
+    public Rol getRol() {
+        return rol;
+    }
+
+    public void setRol(Rol rol) {
+        this.rol = rol;
+    }
 
     public List<Reservacion> getReservacions() {
         return reservaciones;
