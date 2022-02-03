@@ -111,7 +111,7 @@
                         <div class="d-flex flex-row align-items-center">
                           <i class="fas fa-user-friends" style="color: black;"></i>
                           <div class="d-flex flex-column ml-1 comment-profile">
-                            <span>| Máximo 3 Adultos y 2 Niños</span>
+                            <span >| Máximo 3 Adultos y 2 Niños</span>
                           </div>
                         </div>
                       </div>
@@ -120,7 +120,7 @@
                           <div class="d-flex flex-row align-items-center">
                               <i class="fas fa-bed" style="color: black;"></i>
                             <div class="d-flex flex-column ml-1 comment-profile">
-                              <span>| 2 Habitaciones 3 Camas King size en total</span>
+                              <span th:text="*{habitacion.cama}">|</span>
                             </div>
                           </div>
                         </div>
@@ -130,10 +130,10 @@
               <div class="col-md-7">
                 <div class="card">
                   <div class="about">
-                    <h3 class="font-weight-bold"
-                      >Platinum Room
+                    <h3 class="font-weight-bold" th:text="*{habitacion.nombre}"
+                      >
                   </h3>
-                    <h4 class="font-weight-bold">$13.99</h4>
+                    <div class="fs-4 fw-bold d-inline">$<div class="d-inline fw-bold fs-4" th:text="*{habitacion.precio}"></div>.00</div>
                   </div>
                   <div class="buttons">
                     <button class="btn btn-outline-warning btn-long cart">
@@ -184,7 +184,7 @@
     
                 <div class="card mt-2">
                   <h3 class="font-weight-bold">Descripción</h3>
-                      <p>
+                      <p th:text="*{habitacion.descripcion}">
                         Habitación con vista a la playa dentro de nuestras instalaciones
                       </p>
                       <div class="bullets">

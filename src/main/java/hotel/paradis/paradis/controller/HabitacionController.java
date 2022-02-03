@@ -46,8 +46,24 @@ public class HabitacionController {
         return "crud-hotel";
     }
 
+    //Detalles de una habitacion
+    @GetMapping(path="/room-details/{habitacionId}")
+    public String verHabitacion(@PathVariable("habitacionId") Long habitacionId, Model model){
+
+        model.addAttribute("habitacion", habitacionService.getHabitacion(habitacionId));
+        return "room-details";
+    }
+
+    //searches
+    @GetMapping(path="/searches")
+    public String getHabitacionesSearches(Model model){
+
+        model.addAttribute("HabitacionList",habitacionService.getHabitaciones());
+        return "searches";
+    }
+
     @GetMapping(value="/Habitacion-rentar")
-    public String venderProductos(Model model){
+    public String rentarHabitacion(Model model){
     // No s� qu� hacer aqu� xd
         model.addAttribute("habitacionList",habitacionService.getHabitaciones());
         return "habitacion-rentar";

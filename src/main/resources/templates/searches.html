@@ -76,7 +76,7 @@
         
               <div class="container" >
                   <!-- Inicio plantilla -->
-                <div class="container mt-2 mb-2" th:each="cliente: ${clienteList}">
+                <div class="container mt-2 mb-2" th:each="habitacion: ${HabitacionList}">
                   <div class="d-flex justify-content-center row">
                     <div class="col-md-10">
                       <div class="row p-2 bg-white border rounded">
@@ -121,8 +121,8 @@
                           </div>
                           <h6 class="text-success">Apartado disponible</h6>
                           <div class="d-flex flex-column mt-4">
-                            <button class="btn btn-primary btn-sm" type="button">
-                              Ver habitación</button
+                            <a class="btn btn-primary btn-sm" type="button" th:href="@{/habitacion/room-details/} + ${habitacion.idHabitacion}">
+                              Ver habitación</a
                             ><button
                               class="btn btn-outline-primary btn-sm mt-2"
                               type="button"
