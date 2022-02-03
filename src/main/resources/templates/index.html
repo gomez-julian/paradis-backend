@@ -26,129 +26,50 @@
 <body>
 	<header>
 		<div class="container menu-container">
-			<nav
-          class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light"
-          id="ftco-navbar"
-        >
-          <div class="container">
+      <nav class="navbar navbar-expand-lg ftco_navbar ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
             <a class="navbar-brand" href="index.html">PARADIS</a>
             <div class="social-media order-lg-last">
-              <p class="mb-0 d-flex">
-                <a
-                  href="#"
-                  class="d-flex align-items-center justify-content-center"
-                  ><span class="fa fa-facebook"
-                    ><i class="sr-only">Facebook</i></span
-                  ></a
-                >
-                <a
-                  href="#"
-                  class="d-flex align-items-center justify-content-center"
-                  ><span class="fa fa-twitter"
-                    ><i class="sr-only">Twitter</i></span
-                  ></a
-                >
-                <a
-                  href="#"
-                  class="d-flex align-items-center justify-content-center"
-                  ><span class="fa fa-instagram"
-                    ><i class="sr-only">Instagram</i></span
-                  ></a
-                >
-                <a
-                  th:href="@{/habitacion/crud-hotel}"
-                  class="d-flex align-items-center justify-content-center"
-                  ><span><i class="fas fa-edit"></i></span
-                ></a>
-              </p>
+                <p class="mb-0 d-flex">
+                    <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+                    <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-twitter"><i class="sr-only">Twitter</i></span></a>
+                    <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+                    <a th:href="@{/habitacion/crud-hotel}" class="d-flex align-items-center justify-content-center"><span><i class="fas fa-edit"></i></span></a>
+                </p>
             </div>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#ftco-nav"
-              aria-controls="ftco-nav"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="fa fa-bars"></span> Menu
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="fa fa-bars"></span> Menu
             </button>
             <div class="collapse navbar-collapse" id="ftco-nav">
-              <ul class="navbar-nav ml-auto mr-md-3">
-                <li class="nav-item">
-                  <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a th:href="@{/usuario/sign-up}" class="nav-link">Perfil</a>
-                </li>
-                <li class="nav-item">
-                  <a href="searches.html" class="nav-link">Buscar</a>
-                </li>
-              </ul>
+                <ul class="navbar-nav ml-auto mr-md-3">
+                    <li class="nav-item"><a th:href="@{/}" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a th:href="@{/usuario/login}" class="nav-link">Perfil</a></li>
+                    <li class="nav-item"><a th:href="@{/habitacion/searches}" class="nav-link">Buscar</a></li>
+                  </ul>
             </div>
-          </div>
-        </nav>
+        </div>
+    </nav>
 		</div>
 	</header>
 
 	<main>
-		<div id="myCarousel" class="carousel slide m-3" data-bs-ride="carousel">
-			<div class="carousel-indicators">
-				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"
-					aria-current="true" aria-label="Slide 1"></button>
-				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-				<button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-			</div>
+		<div id="myCarousel" class="carousel slide m-3" data-ride="carousel">
+			
 			<div class="carousel-inner ">
 				<div class="carousel-item active">
-					<img src="https://source.unsplash.com/tXqVe7oO-go/1600x900/" alt="">
+					<img src="https://cdn.pixabay.com/photo/2021/08/02/16/22/beach-6517214_960_720.jpg" alt="">
 					
 
 					<div class="container">
 						<div class="carousel-caption text-start">
-							<h1>Example headline.</h1>
-							<p>Some representative placeholder content for the first slide of the carousel.</p>
-							<p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+							<h1>PARADIS Resort Huatulco.</h1>
+							<p>No importa los días, los planes, o tus posibilidades, <br>
+                en PARADIS siempre habrá un lugar para tí.</p>
+							<p><a class="btn btn-lg btn-primary" href="#">Reservar</a></p>
 						</div>
 					</div>
 				</div>
-				<div class="carousel-item">
-					<svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-						aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-						<rect width="100%" height="100%" fill="#777" />
-					</svg>
-
-					<div class="container">
-						<div class="carousel-caption">
-							<h1>Another example headline.</h1>
-							<p>Some representative placeholder content for the second slide of the carousel.</p>
-							<p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-						</div>
-					</div>
-				</div>
-				<div class="carousel-item">
-					<svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-						aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-						<rect width="100%" height="100%" fill="#777" />
-					</svg>
-
-					<div class="container">
-						<div class="carousel-caption text-end">
-							<h1>One more for good measure.</h1>
-							<p>Some representative placeholder content for the third slide of this carousel.</p>
-							<p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-			</button>
+				
 		</div>
 
 
@@ -161,13 +82,11 @@
 			<!-- Three columns of text below the carousel -->
 			<div class="row blwcarr">
 				<div class="col-lg-3 emp-container">
-					<svg class="bd-placeholder-img rounded-circle" width="140" height="140"
-						xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
-						preserveAspectRatio="xMidYMid slice" focusable="false">
+					<img class="bd-placeholder-img rounded-circle" width="140" height="140"
+						src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849822_960_720.jpg" focusable="false">
 						<title>Placeholder</title>
-						<rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-							dy=".3em">140x140</text>
-					</svg>
+						<rect width="100%" height="100%" fill="#777" />
+        </img>
 
 					<h2>Planea</h2>
 					<p>Dependiendo de la habitación que elijas, tendrás acceso a servicios y características
@@ -175,13 +94,11 @@
 					<p><a class="btn btn-secondary" href="#">Ver más &raquo;</a></p>
 				</div><!-- /.col-lg-4 -->
 				<div class="col-lg-3 emp-container">
-					<svg class="bd-placeholder-img rounded-circle" width="140" height="140"
-						xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
-						preserveAspectRatio="xMidYMid slice" focusable="false">
+					<img class="bd-placeholder-img rounded-circle" width="140" height="140"
+						src="https://cdn.pixabay.com/photo/2016/08/26/15/06/home-1622401_960_720.jpg" focusable="false">
 						<title>Placeholder</title>
-						<rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-							dy=".3em">140x140</text>
-					</svg>
+						<rect width="100%" height="100%" fill="#777" />
+        </img>
 
 					<h2>Elige</h2>
 					<p>Tenemos una gran variedad de habitaciones para que escojas la que mejor 
@@ -189,13 +106,11 @@
 					<p><a class="btn btn-secondary" href="#">Escoger &raquo;</a></p>
 				</div><!-- /.col-lg-4 -->
 				<div class="col-lg-3 emp-container">
-					<svg class="bd-placeholder-img rounded-circle" width="140" height="140"
-						xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140"
-						preserveAspectRatio="xMidYMid slice" focusable="false">
+					<img class="bd-placeholder-img rounded-circle" width="140" height="140"
+						src="https://cdn.pixabay.com/photo/2020/07/20/12/08/couple-5422795_960_720.jpg" focusable="false">
 						<title>Placeholder</title>
-						<rect width="100%" height="100%" fill="#777" /><text x="50%" y="50%" fill="#777"
-							dy=".3em">140x140</text>
-					</svg>
+						<rect width="100%" height="100%" fill="#777" />
+        </img>
 
 					<h2>Disfruta</h2>
 					<p>Hemos mejorado nuestras instalaciones para que tu salud se mantenga óptima.</p>
@@ -210,18 +125,15 @@
 
 			<div class="row featurette">
 				<div class="col-md-6 emp-container">
-					<h2 class="featurette-heading">Mantén tus vacaciones <span class="text-muted">Siempre activas.</span></h2>
-					<p class="lead">Contamos con actividades familiares durante toda la semana dentro de 
-						nuestras instalaciones.</p>
+					<h2 class="featurette-heading">Tus noches tan divertidas <span class="text-muted">como desees.</span></h2>
+					<p class="lead">Contamos con un bar privado en nuestras instalaciones con antro y otras
+            actividades nocturnas, para que no pierdas ni un solo minuto de tus vacaciones.</p>
 				</div>
 				<div class="col-md-5">
-					<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-						height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-						preserveAspectRatio="xMidYMid slice" focusable="false">
-						<title>Placeholder</title>
-						<rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-							dy=".3em">500x500</text>
-					</svg>
+					<img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+						height="500" src="https://cdn.pixabay.com/photo/2018/03/03/03/22/alcohol-3194824_960_720.jpg"
+						<rect width="100%" height="100%" fill="#eee" />
+        </img>
 
 				</div>
 			</div>
@@ -230,17 +142,15 @@
 
 			<div class="row featurette">
 				<div class="col-md-6 order-md-2 emp-container">
-					<h2 class="featurette-heading">Ya no se que poner. <span class="text-muted">XD.</span></h2>
-					<p class="lead">Al rato lo termino lo juro.</p>
+					<h2 class="featurette-heading">Puedes nadar <span class="text-muted">todo el tiempo.</span></h2>
+					<p class="lead">Nuestras albercas siempre están disponibles para su uso, para que
+            puedas refrescarte en cualquier momento.</p>
 				</div>
 				<div class="col-md-5 order-md-1">
-					<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-						height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-						preserveAspectRatio="xMidYMid slice" focusable="false">
-						<title>Placeholder</title>
-						<rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-							dy=".3em">500x500</text>
-					</svg>
+					<img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+						height="500" src="https://cdn.pixabay.com/photo/2019/12/28/19/44/house-4725577_960_720.jpg"
+						<rect width="100%" height="100%" fill="#eee" />
+        </img>
 
 				</div>
 			</div>
@@ -249,17 +159,15 @@
 
 			<div class="row featurette">
 				<div class="col-md-6 emp-container">
-					<h2 class="featurette-heading">Ya no me dejen tarea. <span class="text-muted">Por favor.</span></h2>
-					<p class="lead">Embeces la bidha no es como queremos.</p>
+					<h2 class="featurette-heading">¿No tienes planes hoy? <span class="text-muted"> Quédate con nosotros.</span></h2>
+					<p class="lead">Contamos con actividades familiares todos los días, para que 
+            tu y tu familia puedan divertirse cuando lo deseen.</p>
 				</div>
 				<div class="col-md-5">
-					<svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-						height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
-						preserveAspectRatio="xMidYMid slice" focusable="false">
-						<title>Placeholder</title>
-						<rect width="100%" height="100%" fill="#eee" /><text x="50%" y="50%" fill="#aaa"
-							dy=".3em">500x500</text>
-					</svg>
+					<img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+						height="500" src="https://cdn.pixabay.com/photo/2013/02/02/14/01/volleyball-77384_960_720.jpg"
+						<rect width="100%" height="100%" fill="#eee" />
+        </img>
 
 				</div>
 			</div>
@@ -317,7 +225,7 @@
 						  </div>
 						  <p>
 							PARADIS Resort. <br />
-							En proceso de desarrollo, por Juliancito y sus amigos
+							Proyecto realizado con Spring boot y Bootstrap
 						  </p>
 						  <ul class="social">
 							<li>
@@ -335,20 +243,20 @@
 					  <div class="col-lg-4 col-md-6 col-sm-12">
 						<div class="widget widget_link">
 						  <div class="widget_title">
-							<h4>Links</h4>
+							<h4>Integrantes</h4>
 						  </div>
 						  <ul>
-							<li><a href="#">About Us</a></li>
-							<li><a href="#">Services</a></li>
-							<li><a href="#">Portfolio</a></li>
-							<li><a href="#">Blog</a></li>
+							<li><a href="#">Gómez Suárez Julián Enrique</a></li>
+							<li><a href="#">López Canseco Ricardo Ariel</a></li>
+							<li><a href="#">López Cruz Raúl</a></li>
+							<li><a href="#">Lustre Gabriel José Manuel</a></li>
 						  </ul>
 						</div>
 					  </div>
 					  <div class="col-lg-4 col-md-6 col-sm-12">
 						<div class="widget widget_contact">
 						  <div class="widget_title">
-							<h4>Contact Us</h4>
+							<h4>Contacto</h4>
 						  </div>
 						  <div class="contact_info">
 							<div class="single_info">
@@ -368,11 +276,11 @@
 							  </div>
 							  <div class="info">
 								<p>
-								  <a href="mailto:info@deneb.com">info@deneb.com</a>
+								  <a href="mailto:info@deneb.com">info@paradis.com</a>
 								</p>
 								<p>
 								  <a href="mailto:services@deneb.com"
-									>services@deneb.com</a
+									>paradis@gmail.com</a
 								  >
 								</p>
 							  </div>
@@ -383,8 +291,8 @@
 							  </div>
 							  <div class="info">
 								<p>
-								  125, Park street aven, Brocklyn,<span
-									>Newyork.</span
+								  Crucecita,<span
+									>Huatulco.</span
 								  >
 								</p>
 							  </div>
@@ -827,7 +735,7 @@ h5,
 
 
 .carousel-item{
-    height: 30rem;    
+    height: 30rem;   
 }
 
 .emp-container{
