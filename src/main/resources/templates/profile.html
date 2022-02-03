@@ -145,7 +145,7 @@
                   </div>
                 </div>
                 <div class="card-body">
-                  <form id="formulario" th:object="${usuario}" th:action="@{/usuario/edit-usuario/}">
+                  <form method="post" id="formulario" th:object="${usuario}" th:action="@{/usuario/editarusuario/}">
                     <h6 class="heading-small text-muted mb-4">
                       Datos personales
                     </h6>
@@ -226,7 +226,7 @@
                               >Fecha de nacimiento</label
                             >
                             <input
-                              type="date"
+                              type="text"
                               id="fechaNacimiento"
                               name="fechaNacimiento"
                               th:field="*{fechaNacimiento}"

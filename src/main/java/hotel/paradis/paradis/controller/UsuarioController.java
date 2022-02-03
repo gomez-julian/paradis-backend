@@ -1,6 +1,7 @@
 package hotel.paradis.paradis.controller;
 
 import hotel.paradis.paradis.entity.Usuario;
+import hotel.paradis.paradis.repository.UsuarioRepository;
 import hotel.paradis.paradis.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -55,7 +56,7 @@ public class UsuarioController {
         redirectAttrs
                 .addFlashAttribute("mensaje","Agregado correctamente")
                 .addFlashAttribute("clase","success");
-        return "redirect:/usuario/sign-up";
+        return "redirect:/usuario/login";
     }
 
     @GetMapping(path="/eliminar/{usuarioId}")
@@ -70,7 +71,7 @@ public class UsuarioController {
     public String editarUsuario(@PathVariable("usuarioId") Long usuarioId, Model model){
 
         model.addAttribute("usuario", usuarioService.getUsuario(usuarioId));
-        return "editar-usuario";
+        return "profile";
     }
 
     @PostMapping(path="/editarusuario")
@@ -79,6 +80,31 @@ public class UsuarioController {
         usuarioService.updateUsuario(usuario.getIdUsuario(), usuario.getNombre(),
                 usuario.getApellidoPaterno(),usuario.getApellidoMaterno(),
                 usuario.getEmail(), usuario.getTelefono(), usuario.getPassword());
-        return "redirect:/usuario/mostrar";
+        return "redirect:/usuario/profile/" + usuario.getIdUsuario();
     }
+
+    @GetMapping(path="/login")
+    public String logUsuario(){
+        return "login";
+    }
+
+    @PostMapping(path="/login")
+    public String loginUsuario(@ModelAttribute Usuario usuario){
+        Usuario us = usuarioService.getUsuario(usuario.getEmail());
+        if(us==null)
+            return "redirect:/usuario/sign-up";
+        if(usuario.getPassword().equals(us.getPassword())){
+            return "redirect:/usuario/profile/"+ us.getIdUsuario();
+        }else{
+            return "redirect:/usuario/sign-up";
+        }
+    }
+
+    @GetMapping(path="/profile/{usuarioId}")
+    public String profile(@PathVariable("usuarioId") Long usuarioId, Model model){
+
+        model.addAttribute("usuario", usuarioService.getUsuario(usuarioId));
+        return "profile";
+    }
+
 }

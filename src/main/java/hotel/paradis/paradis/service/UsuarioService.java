@@ -1,4 +1,5 @@
 package hotel.paradis.paradis.service;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -6,6 +7,7 @@ import javax.transaction.Transactional;
 import hotel.paradis.paradis.entity.Usuario;
 import hotel.paradis.paradis.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,7 +15,12 @@ import org.springframework.stereotype.Service;
  * @author Jester
  */
 @Service
-public class UsuarioService {
+public class UsuarioService {//implements UsuarioInterfaceService{
+/*
+    @Autowired
+    private BCryptPasswordEncoder passwordEncoder;
+*/
+    @Autowired
     private final UsuarioRepository usuarioRepository;
 
     @Autowired
@@ -28,8 +35,13 @@ public class UsuarioService {
     }
 
     public Usuario getUsuario(Long id){
-        System.out.println(usuarioRepository.findById(id).orElse(null).toString());
+        //System.out.println(usuarioRepository.findById(id).orElse(null).toString());
         return usuarioRepository.findById(id).orElse(null);
+    }
+
+    public Usuario getUsuario(String email){
+        //System.out.println(usuarioRepository.findByEmail(email).orElse(null).toString());
+        return usuarioRepository.findByEmail(email).orElse(null);
     }
 
     public void addNewUsuario(Usuario usuario) {
@@ -116,4 +128,18 @@ public class UsuarioService {
 
         usuarioRepository.save(usuario);
     }
+
+/*
+    @Override
+    public Usuario findbyNombre(String email) {
+        return usuarioRepository.findUsuarioByEmail(email);
+    }
+
+    @Override
+    public Usuario registrar(Usuario usuario) {
+        usuario.setPassword(passwordEncoder.encode(usuario.getPassword()));
+        return usuarioRepository.save(usuario);
+    }
+
+ */
 }

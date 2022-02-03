@@ -36,8 +36,8 @@
                         </button>
                         <div class="collapse navbar-collapse" id="ftco-nav">
                             <ul class="navbar-nav ml-auto mr-md-3">
-                                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                                <li class="nav-item"><a th:href="@{/usuario/sign-up}" class="nav-link">Perfil</a></li>
+                                <li class="nav-item"><a th:href="@{/}" class="nav-link">Home</a></li>
+                                <li class="nav-item"><a th:href="@{/usuario/login}" class="nav-link">Perfil</a></li>
                                 <li class="nav-item"><a href="searches.html" class="nav-link">Buscar</a></li>
                             </ul>
                         </div>
@@ -53,7 +53,7 @@
 				<div class="container" name="contenedorFormularios">
 					<div class="row pt-3">
 						<div class="col-7 py-3 px-4 border border-2 bg-white no-padding-right mx-2 emp-container">
-							<form action="" method="post" id="formulario" class="needs-validation" th:object="${usuario}" th:action="@{/usuario/sign-up/}" novalidate>
+							<form method="post" id="formulario" class="needs-validation" th:object="${usuario}" th:action="@{/usuario/sign-up/}" novalidate>
 								<p class="h3"><strong>Registrate en PARADIS para continuar</strong></p>
 								<p class="text-muted">Introduce tus datos.</p>
 								<div class="row py-3">

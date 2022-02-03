@@ -1,6 +1,7 @@
 package hotel.paradis.paradis.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -89,6 +90,11 @@ public class Usuario {
         this.fechaNacimiento = fechaNacimiento;
         this.paypalEmail = paypalEmail;
         this.paypalPassword = paypalPassword;
+    }
+
+    public Usuario(String email, String password) {
+        this.email = email;
+        this.password = password;
     }
 
     public Long getIdUsuario(){return idUsuario;}
